@@ -1,5 +1,7 @@
 import pandas as pd
 import sys
+import pathlib
+
 
 
 def get_json_df(file_path):
@@ -32,21 +34,15 @@ def transform_orders(df):
 
 
 def main():
-    arguments = sys.argv
 
-    if len(arguments) < 4:
-        print('Missing arguments!')
-        return -1
-    elif len(arguments) > 4:
-        print('More arguments supplied!')
-        return -1
+    path = str(pathlib.Path(__file__).parent.parent.resolve())
+    print(path)
 
-    path = arguments[1]
-    components_file = arguments[2]
-    orders_file = arguments[3]
+    components_file = path + '/data/components.csv'
+    orders_file = path + '/data/orders.json.txt'
 
-    components_df = get_csv_df(path + '/' + components_file)
-    orders_json_df = get_json_df(path + '/' + orders_file)
+    components_df = get_csv_df(components_file)
+    orders_json_df = get_json_df(orders_file)
 
     if components_df is None or orders_json_df is None:
         print('Error with file')
