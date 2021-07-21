@@ -1,37 +1,22 @@
-# Data team coding exercise
+The insights.py is in src/ folder.
 
-## Background
+Steps to run:
+    python3 insights.py file_directoy components_file_name orders_file_name
 
-You've been hired as a data engineer for **PLAYWIBRIX**, a company who manufacture plastic components for construction toys.
+    where file_directory : Path where data files located
 
-There are grander plans for their data... but for now you've been tasked to process some information about components and orders, and to **create a simple output detailing how many units of each coloured component that were ordered on 3rd June 2021**.
+    Eg: python3 insights.py /Users/gowthamanvivekanandan/workspace/code/data-team-coding-exercise/data components.csv orders.json.txt
 
-You've been given two data sets, which are available in https://github.com/qmetric/data-team-coding-exercise/tree/main/data:
 
-`components.csv` - A reference data set in CSV containing some information about the components the company manufactures. For this task you'll be interested in the component ID and the colour of the component.
+Dependencies:
 
-`orders.json.txt` - A file containing lines of JSON records. Each record represents an order of a number of units of different components. The file covers a period over 2nd to 4th June 2021
+    1. Python3
+    2. Pandas
 
-So just as an example, your output could look like:
+  The requirements.txt file has all the pip packages. 
 
-```
-Red: 500
-Orange: 700
-...
-```
+Steps to create Virtual environment:
 
----
-
-## The finer details...
-
-Please use (preferably) Python, or Java to complete this exercise.
-
-**You are free to use any data processing frameworks or libraries as you like.**
-
-Please supply a git repository where we can find your submission, and provide instructions to run your code to produce the output required.
-
-Aside from the practicalities of the exercise, we will be assessing your approach to software engineering... but please don't spend longer than a couple of hours on this task.
-
-Most of all, we'd really love to see a clean, tested, codebase, with a maintainable design. And expect to extend your submission in a future exercise.
-
-Good luck!
+    1. python3 -m venv assignment
+    2. source assignment/bin/activate
+    3. pip3 install -r requirements.txt (File attached in mail)
