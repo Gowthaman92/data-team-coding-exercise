@@ -9,7 +9,7 @@ Steps to create Virtual environment (If Pandas and python3 is already installed,
 
     1. python3 -m venv assignment
     2. source assignment/bin/activate
-    3. pip3 install -r requirements.txt (File attached in mail)
+    3. pip3 install -r requirements.txt
     
     
  The insights.py is in src/ folder.
